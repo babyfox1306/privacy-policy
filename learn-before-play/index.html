@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Privacy Policy for Learn Before Play / Учись и играй">
+  <title>Learn Before Play — Privacy Policy</title>
+  <style>
+    :root { color-scheme: light; --bg:#f5f7fb; --card:#fff; --text:#172033; --muted:#65708a; --line:#dfe5ef; --accent:#315efb; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif; background:var(--bg); color:var(--text); line-height:1.65; }
+    main { max-width:900px; margin:0 auto; padding:32px 18px 64px; }
+    .card { background:var(--card); border:1px solid var(--line); border-radius:18px; padding:28px; box-shadow:0 8px 30px rgba(20,35,70,.06); }
+    h1 { margin:0 0 8px; font-size:clamp(28px,5vw,40px); }
+    h2 { margin-top:34px; font-size:22px; }
+    p, li { color:#303a50; }
+    .meta { color:var(--muted); margin-bottom:20px; }
+    .tabs { display:flex; gap:10px; flex-wrap:wrap; margin:20px 0 8px; }
+    .tabs a { display:inline-block; padding:9px 14px; border:1px solid var(--line); border-radius:999px; text-decoration:none; color:var(--accent); font-weight:600; background:#fff; }
+    .summary { padding:16px 18px; border-radius:12px; background:#eef3ff; margin:22px 0; }
+    code { background:#f0f2f6; padding:2px 5px; border-radius:5px; }
+    hr { border:0; border-top:1px solid var(--line); margin:42px 0; }
+    a { color:var(--accent); }
+    footer { margin-top:30px; color:var(--muted); font-size:14px; }
+  </style>
+</head>
+<body>
+<main>
+  <div class="card">
+    <h1>Learn Before Play / Учись и играй</h1>
+    <div class="meta">Privacy Policy · Effective date: 6 September 2026</div>
+    <div class="tabs"><a href="#english">English</a><a href="#russian">Русский</a></div>
+
+    <section id="english" lang="en">
+      <h2>English</h2>
+      <div class="summary"><strong>Short version:</strong> Learn Before Play works locally on the Android device. The current version has no account, backend, advertising SDK, analytics SDK, cloud sync, or remote API, and it declares no Android <code>INTERNET</code> permission.</div>
+
+      <h2>Data stored on the device</h2>
+      <p>The app stores only local state required to provide the product:</p>
+      <ul>
+        <li>whether the AccessibilityService disclosure was accepted;</li>
+        <li>a salted cryptographic hash of the parent PIN and its random salt;</li>
+        <li>package names of apps selected by the parent for gating;</li>
+        <li>the selected learning rule;</li>
+        <li>temporary unlock-expiry timestamps for gated apps;</li>
+        <li>total completed-challenge count;</li>
+        <li>total earned-minute count.</li>
+      </ul>
+      <p>The parent PIN itself is not stored as plaintext. Android application backup is disabled for the app.</p>
+
+      <h2>AccessibilityService</h2>
+      <p>Learn Before Play uses Android AccessibilityService for a narrow app-gating function. It observes foreground package events so it can determine whether an app selected by a parent has been opened and whether a local learning gate should be shown.</p>
+      <p>The service is configured with <code>android:canRetrieveWindowContent="false"</code>. The current version does not use AccessibilityService to retrieve screen text, messages, passwords, typed text, or accessibility node content. It does not automate taps or actions inside other apps.</p>
+      <p>Gating does not start until the in-app Accessibility disclosure has been accepted and parent PIN setup is complete. The service can be disabled at any time in Android Accessibility settings.</p>
+
+      <h2>Network, advertising, analytics, and accounts</h2>
+      <p>The current version contains no account system, cloud sync, advertising SDK, analytics SDK, remote API, or social/chat system. Because the app has no Android <code>INTERNET</code> permission, the app itself cannot directly transmit its local state over the network.</p>
+
+      <h2>Children</h2>
+      <p>Learn Before Play is configured by a parent or guardian. A child may interact with the local learning gate. The current version does not create child accounts, collect contact information, run advertising, or transmit behavioral analytics.</p>
+
+      <h2>Deleting local data</h2>
+      <p>Local app data can be removed by clearing Learn Before Play app data in Android Settings or by uninstalling the app. Inside parent controls, the parent can also revoke current reward windows and reset challenge/minutes activity counters.</p>
+
+      <h2>Security boundary</h2>
+      <p>Learn Before Play is not device-owner/MDM software. Someone with sufficient device-settings access may disable AccessibilityService, uninstall the app, clear app data, or otherwise bypass the casual parent-control boundary. The app does not claim to be tamper-proof.</p>
+
+      <h2>Changes</h2>
+      <p>If a future version adds networking, accounts, analytics, advertising, cloud sync, or additional sensitive permissions, this policy will be updated before that version is released.</p>
+    </section>
+
+    <hr>
+
+    <section id="russian" lang="ru">
+      <h2>Русский</h2>
+      <div class="summary"><strong>Кратко:</strong> приложение «Учись и играй» работает локально на Android-устройстве. В текущей версии нет учётных записей, серверной части, рекламных или аналитических SDK, облачной синхронизации и удалённого API. Приложение также не запрашивает Android-разрешение <code>INTERNET</code>.</div>
+
+      <h2>Данные, хранящиеся на устройстве</h2>
+      <p>Приложение хранит только локальные данные, необходимые для его работы:</p>
+      <ul>
+        <li>факт принятия уведомления об использовании AccessibilityService;</li>
+        <li>криптографический хэш родительского PIN-кода с солью и случайную соль;</li>
+        <li>имена пакетов приложений, выбранных родителем для ограничения;</li>
+        <li>выбранное учебное правило;</li>
+        <li>временные метки окончания предоставленного доступа;</li>
+        <li>общее число выполненных заданий;</li>
+        <li>общее количество заработанных минут.</li>
+      </ul>
+      <p>Сам родительский PIN-код не хранится в открытом виде. Резервное копирование данных приложения средствами Android отключено.</p>
+
+      <h2>AccessibilityService</h2>
+      <p>«Учись и играй» использует Android AccessibilityService только для ограниченной функции контроля запуска выбранных приложений. Сервис отслеживает события активного пакета, чтобы определить, было ли открыто приложение, выбранное родителем, и нужно ли показать локальное учебное задание.</p>
+      <p>Сервис настроен с параметром <code>android:canRetrieveWindowContent="false"</code>. Текущая версия не использует AccessibilityService для чтения текста на экране, сообщений, паролей, вводимого текста или содержимого accessibility-узлов. Приложение не автоматизирует нажатия и действия внутри других приложений.</p>
+      <p>Ограничение приложений не включается до тех пор, пока пользователь не подтвердит уведомление об AccessibilityService и не настроит родительский PIN-код. Сервис можно отключить в любой момент в настройках специальных возможностей Android.</p>
+
+      <h2>Сеть, реклама, аналитика и аккаунты</h2>
+      <p>В текущей версии нет системы аккаунтов, облачной синхронизации, рекламных SDK, аналитических SDK, удалённого API или социальной/чат-функции. Поскольку приложение не имеет Android-разрешения <code>INTERNET</code>, оно не может напрямую передавать своё локальное состояние по сети.</p>
+
+      <h2>Дети</h2>
+      <p>Приложение настраивается родителем или опекуном. Ребёнок может взаимодействовать с локальным учебным экраном. Текущая версия не создаёт детские аккаунты, не собирает контактные данные, не показывает рекламу и не передаёт поведенческую аналитику.</p>
+
+      <h2>Удаление локальных данных</h2>
+      <p>Локальные данные можно удалить через очистку данных приложения в настройках Android или удалив приложение. В родительских настройках также можно немедленно отменить активные периоды доступа и сбросить счётчики выполненных заданий и заработанных минут.</p>
+
+      <h2>Граница защиты</h2>
+      <p>«Учись и играй» не является системой Device Owner/MDM. Пользователь с достаточным доступом к настройкам устройства может отключить AccessibilityService, удалить приложение, очистить его данные или иным способом обойти обычное родительское ограничение. Приложение не заявляет о полной защите от обхода.</p>
+
+      <h2>Изменения политики</h2>
+      <p>Если в будущей версии появятся сетевые функции, аккаунты, аналитика, реклама, облачная синхронизация или дополнительные чувствительные разрешения, эта политика будет обновлена до выпуска такой версии.</p>
+    </section>
+
+    <h2>Contact / Контакты</h2>
+    <p>Project owner / владелец проекта: <a href="https://github.com/babyfox1306">github.com/babyfox1306</a></p>
+    <footer><a href="https://babyfox1306.github.io/apps/">All apps &amp; policies</a></footer>
+  </div>
+</main>
+</body>
+</html>
